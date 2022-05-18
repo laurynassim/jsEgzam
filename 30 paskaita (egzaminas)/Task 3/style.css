@@ -59,3 +59,24 @@
   border-radius: 5px;
   background-color: #fff;
 }
+.displayAvatarImg{
+  max-width: 200px;
+  object-fit: contain;
+}
+.tabsContainer{
+  width: 260px;
+  height: 260px;
+  background-color: blueviolet;
+  display: flex;
+  align-items: center;
+  flex-direction: column-reverse;
+  padding: 1rem;
+  margin: 1rem;
+  font-size: 2rem;
+  font-weight: 600;
+}
+.displayDivWrapper{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
