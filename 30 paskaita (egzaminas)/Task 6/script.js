@@ -19,3 +19,24 @@ const users = [
   { id: '8', name: 'Simon Peterson', age: 30 },
   { id: '9', name: 'Daniel Cane', age: 51 },
 ];
+
+getUserAverageAge(users)
+getUsersNames(users)
+
+function getUserAverageAge (block){
+  let totalArrayAge = 0
+  for (let i = 0; i < block.length; i++){
+    totalArrayAge += block[i].age
+    averageAge =  totalArrayAge / block.length
+  }
+  let rounded = averageAge.toFixed(2);
+  console.log(rounded)
+}
+
+function getUsersNames(block){
+  let newArray  = []
+  for (let i = 0; i < block.length; i++){
+    newArray.push(block[i].name)
+  }
+  console.log(newArray)
+}
