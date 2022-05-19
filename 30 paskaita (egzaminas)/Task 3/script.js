@@ -26,26 +26,18 @@ async function getDataFromApi() {
 }
 
 function showDataInDom(data){
-    console.log(data)
-    
-
     let displayDivWrapper = document.createElement('div')
     displayDivWrapper.setAttribute('class', 'displayDivWrapper')
     const removeDivWrapper = document.getElementsByClassName("displayDivWrapper");
     while (removeDivWrapper.length > 0) removeDivWrapper[0].remove();
     displayDiv.append(displayDivWrapper)
-
     for (let i = 0; i < data.length; i++){
         createTabs(data, displayDivWrapper, i)
     }
-    
-    
 }
 
 function createTabs(array, parentDiv, index){
     
-    
-
     let tabsContainer =  document.createElement('div')
     tabsContainer.setAttribute('class', 'tabsContainer')
     parentDiv.append(tabsContainer)
@@ -61,6 +53,5 @@ function createTabs(array, parentDiv, index){
     displayLogin.innerText = array[index].login
     displayAvatarImg.src = String(array[index].avatar_url)
 
-
-
 }
+
