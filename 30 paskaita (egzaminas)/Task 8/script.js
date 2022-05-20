@@ -6,27 +6,25 @@ multiplication() - priima du skaičius ir grąžina jų daugybos rezultatą;
 division() - priima du skaičius ir grąžina jų dalybos rezultatą;
 ------------------------------------------------------------------------------------ */
 
-function Calculator(num1, num2){
-    this.firstNumber = num1;
-    this.secondNumber = num2;
-    this.sum = function(){
-        return this.firstNumber + this.secondNumber
+function Calculator(){
+    this.sum = function(num1, num2){
+        return num1 + num2
     }
-    this.subtraction = function(){
-        return this.firstNumber - this.secondNumber
+    this.subtraction = function(num1, num2){
+        return num1 - num2
     }
-    this.multiplication = function(){
-        return this.firstNumber * this.secondNumber
+    this.multiplication = function(num1, num2){
+        return num1 * num2
     }
-    this.division = function(){
-        return this.firstNumber / this.secondNumber
+    this.division = function(num1, num2){
+        return num1 / num2
     }
 
 }
 
-const myCalculator = new Calculator (10, 5)
+const myCalculator = new Calculator ()
 
-console.log(myCalculator.sum())
-console.log(myCalculator.subtraction())
-console.log(myCalculator.multiplication())
-console.log(myCalculator.division())
+// console.log(myCalculator.sum(2,2))
+// console.log(myCalculator.subtraction(2,2))
+// console.log(myCalculator.multiplication(2,2))
+// console.log(myCalculator.division(2,2))
