@@ -13,6 +13,7 @@ const ENDPOINT = 'cars.json';
 let output = document.getElementById('output')
 
 fetch(ENDPOINT)
+
     .then(response => { return response.json();})
     .then(manoFailas => {
         // Dirbam su gautais duomenimis
@@ -39,7 +40,7 @@ fetch(ENDPOINT)
             let brandCardModels = document.createElement('div')
             brandCardModels.setAttribute('class', 'brandCardModels')
             brandCard.append(brandCardModels)
-            brandCardModels.innerHTML = data[i].models
+            brandCardModels.innerHTML = data[i].models.join(', ');
            
         }
     }
